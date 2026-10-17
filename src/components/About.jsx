@@ -4,15 +4,15 @@ import { Compass, GraduationCap, MapPin, Sparkles, Languages, Code2 } from 'luci
 export default function About() {
   return (
     <section id="about" className="space-y-8">
-      <div className="border-b border-white/5 pb-4">
+      <div className="border-b border-white/5 pb-4 text-center sm:text-left">
         <span className="text-xs font-mono text-white/40 uppercase tracking-widest">Background</span>
         <h2 className="font-display text-2xl sm:text-3xl font-medium text-white mt-1">About &amp; Focus</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10">
         
         {/* Modern Narrative */}
-        <div className="md:col-span-7 space-y-5 text-white/70 font-light leading-relaxed text-base">
+        <div className="md:col-span-7 space-y-5 text-white/70 font-light leading-relaxed text-sm sm:text-base text-center sm:text-left">
           <p>
             I am a <span className="text-white font-medium">Computer Science and Engineering</span> student specializing in the <span className="text-white font-medium">Internet of Things (IoT)</span> at Netaji Subhash Engineering College (2024 &ndash; 2028), Kolkata.
           </p>

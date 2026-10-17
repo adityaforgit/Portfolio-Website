@@ -39,7 +39,7 @@ const milestones = [
 export default function Timeline() {
   return (
     <section id="milestones" className="space-y-8">
-      <div className="border-b border-white/5 pb-4">
+      <div className="border-b border-white/5 pb-4 text-center sm:text-left">
         <span className="text-xs font-mono text-white/40 uppercase tracking-widest">Track Record</span>
         <h2 className="font-display text-2xl sm:text-3xl font-medium text-white mt-1">Honors &amp; Education</h2>
       </div>
@@ -48,16 +48,16 @@ export default function Timeline() {
         {milestones.map((item, idx) => (
           <div
             key={idx}
-            className="py-6 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 items-baseline group hover:bg-white/[0.015] px-2 rounded-xl transition-colors"
+            className="py-6 flex flex-col sm:grid sm:grid-cols-12 gap-3 sm:gap-6 items-center sm:items-baseline text-center sm:text-left group hover:bg-white/[0.015] px-2 rounded-xl transition-colors"
           >
             {/* Year */}
-            <div className="md:col-span-3 text-xs font-mono text-white/40 flex items-center gap-2">
+            <div className="sm:col-span-3 text-xs font-mono text-white/40 flex items-center justify-center sm:justify-start gap-2">
               <span className="text-white/60 font-medium">{item.year}</span>
             </div>
 
             {/* Title & Desc */}
-            <div className="md:col-span-6 space-y-1">
-              <div className="flex items-center gap-2">
+            <div className="sm:col-span-6 space-y-1">
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
                 <span className="font-display font-medium text-white text-base group-hover:text-white transition-colors">
                   {item.title}
                 </span>
@@ -75,7 +75,7 @@ export default function Timeline() {
             </div>
 
             {/* Role */}
-            <div className="md:col-span-3 text-xs font-mono text-emerald-400/90 md:text-right" dangerouslySetInnerHTML={{ __html: item.role }} />
+            <div className="sm:col-span-3 text-xs font-mono text-emerald-400/90 sm:text-right" dangerouslySetInnerHTML={{ __html: item.role }} />
           </div>
         ))}
       </div>

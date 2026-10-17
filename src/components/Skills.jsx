@@ -46,7 +46,7 @@ const skillCategories = [
 export default function Skills() {
   return (
     <section id="skills" className="space-y-8">
-      <div className="border-b border-white/5 pb-4">
+      <div className="border-b border-white/5 pb-4 text-center sm:text-left">
         <span className="text-xs font-mono text-white/40 uppercase tracking-widest">Capabilities</span>
         <h2 className="font-display text-2xl sm:text-3xl font-medium text-white mt-1">Technical Skills</h2>
       </div>
@@ -57,16 +57,16 @@ export default function Skills() {
           return (
             <div
               key={i}
-              className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-white/15 transition-all space-y-4"
+              className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-white/15 transition-all space-y-4 text-center sm:text-left"
             >
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-3">
                 <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-white/80">
                   <Icon className="w-4 h-4 text-emerald-400" />
                 </div>
                 <h3 className="font-display text-base font-medium text-white">{cat.title}</h3>
               </div>
 
-              <div className="flex flex-wrap gap-2 pt-1">
+              <div className="flex flex-wrap justify-center sm:justify-start gap-2 pt-1">
                 {cat.skills.map((skill, sIdx) => (
                   <span
                     key={sIdx}

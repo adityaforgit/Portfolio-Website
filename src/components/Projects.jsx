@@ -166,14 +166,14 @@ export default function Projects() {
   return (
     <section id="work" className="space-y-8">
       {/* Header & Filter Row */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-white/5 pb-5 gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-white/5 pb-5 gap-4 text-center sm:text-left">
         <div>
           <span className="text-xs font-mono text-white/40 uppercase tracking-widest">Featured Work</span>
           <h2 className="font-display text-2xl sm:text-3xl font-medium text-white mt-1">Highlighted Projects</h2>
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap gap-2 text-xs font-mono">
+        <div className="flex flex-wrap justify-center sm:justify-start gap-2 text-xs font-mono">
           {filterTabs.map((tab) => (
             <button
               key={tab.key}

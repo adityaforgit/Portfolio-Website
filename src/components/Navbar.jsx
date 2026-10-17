@@ -8,12 +8,12 @@ export default function Navbar({ onReplayIntro }) {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="sticky top-0 z-40 w-full bg-[#090A0D]/80 backdrop-blur-md border-b border-white/5 px-6 py-4"
+      className="sticky top-0 z-40 w-full bg-[#090A0D]/80 backdrop-blur-md border-b border-white/5 px-4 sm:px-6 py-3.5 sm:py-4"
     >
       <div className="max-w-5xl mx-auto flex items-center justify-between">
         
         {/* Brand */}
-        <a href="#hero" className="text-sm font-semibold tracking-tight text-white flex items-center gap-2.5 group">
+        <a href="#hero" className="text-sm font-semibold tracking-tight text-white flex items-center gap-2 group">
           <span className="w-2 h-2 rounded-full bg-emerald-400 group-hover:scale-125 transition-transform"></span>
           <span className="font-display">Aditya Thakur</span>
           <span className="hidden sm:inline text-xs font-mono text-white/30">&bull; Kolkata</span>
@@ -29,7 +29,7 @@ export default function Navbar({ onReplayIntro }) {
         </nav>
 
         {/* Action Buttons */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <button
             onClick={onReplayIntro}
             title="Replay Intro Animation"

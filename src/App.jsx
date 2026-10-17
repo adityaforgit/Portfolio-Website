@@ -33,14 +33,11 @@ export default function App() {
         />
       )}
 
-      {/* Ambient Lighting Background */}
-      <div className="ambient-halo" />
-
       {/* Top Navigation */}
       <Navbar onReplayIntro={handleReplayIntro} />
 
-      {/* Main Content Sections */}
-      <main className="relative z-10 max-w-4xl mx-auto px-6 py-12 sm:py-20 space-y-28">
+      {/* Main Content Sections (Properly Centered and Full-Width on Mobile) */}
+      <main className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-20 space-y-20 sm:space-y-28">
         <Hero />
         <Projects />
         <Skills />

@@ -22,17 +22,17 @@ export default function Contact() {
 
   return (
     <section id="contact" className="pt-12 border-t border-white/10 space-y-8">
-      <div className="space-y-4">
+      <div className="space-y-4 text-center sm:text-left">
         <span className="text-xs font-mono text-white/40 uppercase tracking-widest">Get In Touch</span>
         <h2 className="font-display text-3xl sm:text-5xl font-semibold text-white tracking-tight">
           Let's build something impactful together.
         </h2>
-        <p className="text-white/60 font-light max-w-xl text-base leading-relaxed">
+        <p className="text-white/60 font-light max-w-xl text-sm sm:text-base leading-relaxed mx-auto sm:mx-0">
           Open for software engineering internships, backend microservices development, hackathon collaborations, and innovative engineering challenges. Based in Kolkata, India.
         </p>
       </div>
 
-      <div className="flex flex-wrap items-center gap-4 pt-2 text-xs font-mono">
+      <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 pt-2 text-xs font-mono">
         {/* Copy Email Button */}
         <button
           onClick={copyEmail}
