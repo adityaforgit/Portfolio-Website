@@ -4,23 +4,23 @@
 
 @layer base {
   body {
-    @apply bg-[#090A0D] text-[#F8FAFC] font-sans overflow-x-hidden;
+    @apply bg-charcoal text-[#F8FAFC] font-sans overflow-x-hidden antialiased;
   }
 }
 
 /* Custom Minimalist Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #090A0D;
+  background: #222225;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
+  background: #3D68FF;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: #5D82FF;
 }
 
 /* Subtle ambient spotlight background */
@@ -35,5 +35,26 @@
   filter: blur(100px);
   pointer-events: none;
   z-index: 0;
+}
+
+/* Continuous Sliding Animation for Projects Row */
+@keyframes projectSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-project-slide {
+  display: flex;
+  width: max-content;
+  animation: projectSlide 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-project-slide:hover {
+  animation-play-state: paused;
 }
 
