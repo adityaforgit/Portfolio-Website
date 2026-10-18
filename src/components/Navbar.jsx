@@ -28,7 +28,7 @@ export default function Navbar({ onReplayIntro }) {
             onClick={() => scrollTo('contact')}
             className="py-3.5 sm:py-4 px-2 hover:text-white hover:bg-white/[0.04] transition-all cursor-pointer font-medium truncate"
           >
-            Contact &amp; Resume
+            Contact
           </button>
         </div>
 

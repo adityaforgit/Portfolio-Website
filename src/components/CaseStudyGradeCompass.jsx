@@ -19,10 +19,10 @@ export default function CaseStudyGradeCompass() {
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <span className="font-mono text-xs uppercase tracking-widest text-emerald-400 font-semibold">
-                PERSONAL ACADEMIC TOOL
+                PERSONAL PROJECT
               </span>
               <span className="text-white/30">&bull;</span>
-              <span className="font-mono text-xs text-white/50">MAKAUT CURRICULUM</span>
+              <span className="font-mono text-xs text-white/50">BUILT FROM SCRATCH</span>
             </div>
 
             <h3 className="font-serif text-5xl sm:text-6xl text-white font-normal tracking-tight">
@@ -31,31 +31,32 @@ export default function CaseStudyGradeCompass() {
           </div>
 
           <p className="font-sans text-white/80 text-base sm:text-lg leading-relaxed">
-            A specialized academic calculation tool built for students of Maulana Abul Kalam Azad University of Technology (MAKAUT). Takes the guesswork out of semester prep by calculating continuous assessments and estimating the exact score required on the End-Semester Exam to hit target grades.
+            Grade Compass is my personal project, built from scratch for MAKAUT students. It helps students understand internal marks and estimate the End-Semester Examination score needed to achieve a target grade.
           </p>
 
           {/* Social Proof Pill Badge */}
           <div className="relative inline-flex items-center">
-            <DoodleOval className="w-56 h-12 text-doodle-blue" />
+            <DoodleOval className="w-60 h-12 text-doodle-blue" />
             <span className="absolute inset-0 flex items-center justify-center font-script text-doodle-blue text-base">
-              Used by 1,000+ university peers!
+              Built from scratch for MAKAUT
             </span>
           </div>
 
           {/* Feature List */}
           <div className="space-y-2 font-sans text-sm text-white/70 pt-1">
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span>Real-time End-Semester Exam (ESE) target score prediction</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span>Accurate weighting for CA (Continuous Assessment) &amp; PCA (Practical)</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span>Mobile-responsive interactive calculation interface</span>
-            </div>
+            {[
+              'Subject-wise marks and grade calculation',
+              'Internal marks calculation',
+              'End-Semester Examination target-score prediction',
+              'Real-time updates while entering marks',
+              'Input validation',
+              'Mobile-friendly interface'
+            ].map((feature, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0" />
+                <span>{feature}</span>
+              </div>
+            ))}
           </div>
 
           {/* Tech Badges */}
@@ -70,7 +71,7 @@ export default function CaseStudyGradeCompass() {
           {/* Action Links */}
           <div className="pt-2">
             <a
-              href="https://github.com/adityaforgit"
+              href="https://github.com/adityaforgit/grade-compass"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-charcoal font-medium text-xs font-mono hover:bg-white/90 transition-all shadow-md"

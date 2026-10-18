@@ -3,10 +3,33 @@ import { DoodleSpiral, DoodleArrow } from './Doodles';
 
 const previewItems = [
   {
+    id: 'grade-compass',
+    title: 'Grade Compass',
+    category: 'Personal Project • Built from Scratch',
+    tag: 'Academic Calculator',
+    description: 'A MAKAUT-focused academic calculator that helps students track internal marks and estimate the End-Semester Examination score needed for target grades.',
+    color: 'from-emerald-500/20 to-teal-500/10',
+    accent: '#10B981',
+    preview: (
+      <div className="w-full h-full p-2.5 flex flex-col justify-between text-[8px] font-mono">
+        <div className="flex justify-between items-center text-emerald-400">
+          <span>GRADE COMPASS</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+        </div>
+        <div className="bg-emerald-500/20 border border-emerald-400/30 p-1.5 rounded">
+          <div className="text-emerald-300">Target SGPA: 8.50</div>
+          <div className="text-white font-bold">Need 52/70 in ESE</div>
+        </div>
+        <div className="text-white/40 text-[7px]">Built from scratch for MAKAUT</div>
+      </div>
+    )
+  },
+  {
     id: 'nagar-sudhar',
     title: 'Nagar Sudhar',
-    category: 'SIH 2025 • 4th Rank',
+    category: 'Smart India Hackathon 2025 • Rank 4',
     tag: 'Civic Issue Resolution',
+    description: 'Civic issue reporting system developed as a team project for Smart India Hackathon 2025.',
     color: 'from-amber-500/20 to-orange-500/10',
     accent: '#F59E0B',
     preview: (
@@ -26,8 +49,9 @@ const previewItems = [
   {
     id: 'unnati',
     title: 'Unnati Portal',
-    category: 'SIH 2026 Finalist',
+    category: 'Smart India Hackathon 2026 • Participant',
     tag: 'Citizen & CSR Platform',
+    description: 'A platform connecting village-level challenges with student projects, CSR funding, and government monitoring.',
     color: 'from-blue-500/20 to-indigo-500/10',
     accent: '#3D68FF',
     preview: (
@@ -43,80 +67,11 @@ const previewItems = [
         <div className="text-white/40 text-[7px]">Status: Active Sprint</div>
       </div>
     )
-  },
-  {
-    id: 'grade-compass',
-    title: 'Grade Compass',
-    category: 'Academic Tool',
-    tag: 'MAKAUT SGPA Predictor',
-    color: 'from-emerald-500/20 to-teal-500/10',
-    accent: '#10B981',
-    preview: (
-      <div className="w-full h-full p-2.5 flex flex-col justify-between text-[8px] font-mono">
-        <div className="flex justify-between items-center text-emerald-400">
-          <span>GRADE COMPASS</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-        </div>
-        <div className="bg-emerald-500/20 border border-emerald-400/30 p-1.5 rounded">
-          <div className="text-emerald-300">Target SGPA: 8.75</div>
-          <div className="text-white font-bold">Need 52/70 in ESE</div>
-        </div>
-        <div className="text-white/40 text-[7px]">Used by 1,000+ Students</div>
-      </div>
-    )
-  },
-  {
-    id: 'microservices',
-    title: 'Microservices',
-    category: 'Backend Architecture',
-    tag: 'Spring Cloud & Gateway',
-    color: 'from-purple-500/20 to-violet-500/10',
-    accent: '#8B5CF6',
-    preview: (
-      <div className="w-full h-full p-2.5 flex flex-col justify-between text-[8px] font-mono">
-        <div className="flex justify-between items-center text-purple-400">
-          <span>EUREKA REGISTRY</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-white/70">
-            <span>Auth Service</span>
-            <span className="text-emerald-400">UP</span>
-          </div>
-          <div className="flex justify-between text-white/70">
-            <span>Order Service</span>
-            <span className="text-emerald-400">UP</span>
-          </div>
-        </div>
-        <div className="text-white/40 text-[7px]">Resilience4j Circuit Active</div>
-      </div>
-    )
-  },
-  {
-    id: 'iot-telemetry',
-    title: 'IoT Telemetry',
-    category: 'Hardware & Edge',
-    tag: 'ESP32 MQTT Broker',
-    color: 'from-cyan-500/20 to-sky-500/10',
-    accent: '#06B6D4',
-    preview: (
-      <div className="w-full h-full p-2.5 flex flex-col justify-between text-[8px] font-mono">
-        <div className="flex justify-between items-center text-cyan-400">
-          <span>ESP32 SENSOR</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-        </div>
-        <div className="bg-white/10 p-1.5 rounded">
-          <div className="text-white/60">Temp: 26.4°C</div>
-          <div className="text-cyan-300 font-bold">Latency: 18ms</div>
-        </div>
-        <div className="text-white/40 text-[7px]">MQTT Broker: Connected</div>
-      </div>
-    )
   }
 ];
 
 // Duplicated list for infinite seamless loop sliding
-const slidingItems = [...previewItems, ...previewItems];
+const slidingItems = [...previewItems, ...previewItems, ...previewItems, ...previewItems];
 
 export default function ProjectsOverview() {
   const scrollTo = (id) => {

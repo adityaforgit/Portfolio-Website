@@ -6,9 +6,9 @@ const toolIcons = [
   { name: 'Spring', symbol: '🍃' },
   { name: 'React', symbol: '⚛️' },
   { name: 'Python', symbol: '🐍' },
-  { name: 'Docker', symbol: '🐳' },
   { name: 'Git', symbol: '🌿' },
-  { name: 'MySQL', symbol: '🐬' },
+  { name: 'VS Code', symbol: '💻' },
+  { name: 'IntelliJ', symbol: '⚡' },
 ];
 
 export default function SkillsSection() {
@@ -56,35 +56,35 @@ export default function SkillsSection() {
           {/* Left Column: Skills Bullet Points */}
           <div className="md:col-span-7 space-y-6 text-left">
             <p className="font-sans text-charcoal/80 text-base leading-relaxed">
-              Specialized in engineering robust backend architectures, distributed microservice boundaries, high-concurrency Java algorithms, and responsive user interfaces.
+              Practical technical skill set across object-oriented programming, modern web frameworks, core backend development, and user interface design.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
               {/* Category 1 */}
               <div className="space-y-2">
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider text-charcoal/50 block">
-                  Core Languages
+                  Programming Languages
                 </span>
                 <ul className="space-y-1.5 text-sm font-sans text-charcoal/80">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    Java &bull; DSA Mastery
+                    C
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    Python &bull; Scripting &amp; Automation
+                    Java
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    C Language &bull; System Programming
+                    Python
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    PHP &bull; Core &amp; Web
+                    PHP
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    JavaScript (ES6+)
+                    JavaScript
                   </li>
                 </ul>
               </div>
@@ -92,28 +92,28 @@ export default function SkillsSection() {
               {/* Category 2 */}
               <div className="space-y-2">
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider text-charcoal/50 block">
-                  Backend &amp; Architecture
+                  Web Development
                 </span>
                 <ul className="space-y-1.5 text-sm font-sans text-charcoal/80">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    Spring Boot Framework
+                    HTML
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    Microservices Architecture
+                    CSS
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    RESTful API Design
+                    JavaScript
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    Spring Data JPA &amp; Hibernate
+                    React
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    MySQL &amp; PostgreSQL
+                    Tailwind CSS
                   </li>
                 </ul>
               </div>
@@ -121,20 +121,24 @@ export default function SkillsSection() {
               {/* Category 3 */}
               <div className="space-y-2">
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider text-charcoal/50 block">
-                  Frontend &amp; UI
+                  Backend and Core Concepts
                 </span>
                 <ul className="space-y-1.5 text-sm font-sans text-charcoal/80">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    React.js &amp; Modern Hooks
+                    Spring
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    Tailwind CSS &amp; Framer Motion
+                    Spring Boot
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    UI/UX Design Systems
+                    Microservices
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
+                    Data Structures and Algorithms in Java
                   </li>
                 </ul>
               </div>
@@ -142,20 +146,28 @@ export default function SkillsSection() {
               {/* Category 4 */}
               <div className="space-y-2">
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider text-charcoal/50 block">
-                  DevOps &amp; IoT
+                  Tools and Design
                 </span>
                 <ul className="space-y-1.5 text-sm font-sans text-charcoal/80">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    Git, GitHub &amp; Version Control
+                    Git
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    Docker &amp; Containerization
+                    GitHub
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                    ESP32 &bull; Sensors &bull; MQTT
+                    Visual Studio Code
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
+                    IntelliJ IDEA
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
+                    UI/UX Design
                   </li>
                 </ul>
               </div>

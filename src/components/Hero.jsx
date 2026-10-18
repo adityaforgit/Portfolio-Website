@@ -29,12 +29,17 @@ export default function Hero() {
         </h1>
 
         {/* Sketched hand-drawn blue oval badge */}
-        <div className="relative inline-flex items-center justify-center px-6 py-2">
+        <div className="relative inline-flex items-center justify-center px-6 py-2 mb-4">
           <DoodleOval className="absolute inset-0 w-full h-full text-doodle-blue scale-105" />
-          <span className="relative z-10 font-mono text-[11px] sm:text-xs tracking-[0.25em] uppercase text-white/90 font-medium">
-            CSE • IOT • SPRING BOOT
+          <span className="relative z-10 font-mono text-[11px] sm:text-xs tracking-[0.2em] uppercase text-white/90 font-medium">
+            CSE Student &bull; IoT &bull; Java &bull; Spring Boot
           </span>
         </div>
+
+        {/* Subtitle */}
+        <p className="font-sans text-sm sm:text-base text-white/70 max-w-xl mx-auto leading-relaxed">
+          Building practical software projects with Java, web technologies, and user-focused design.
+        </p>
       </motion.div>
     </section>
   );

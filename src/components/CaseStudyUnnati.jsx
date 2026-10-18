@@ -82,7 +82,7 @@ export default function CaseStudyUnnati() {
                 SMART INDIA HACKATHON 2026
               </span>
               <span className="text-charcoal/30">&bull;</span>
-              <span className="font-mono text-xs text-charcoal/60">NATIONAL STAGE</span>
+              <span className="font-mono text-xs text-charcoal/60">PARTICIPANT</span>
             </div>
 
             <h3 className="font-serif text-5xl sm:text-6xl text-charcoal font-normal tracking-tight">
@@ -92,22 +92,25 @@ export default function CaseStudyUnnati() {
           </div>
 
           <p className="font-sans text-charcoal/80 text-base sm:text-lg leading-relaxed">
-            Engineered for Smart India Hackathon 2026, the <strong className="text-charcoal font-medium">Unnati Portal</strong> serves as a nationwide platform linking ground-level rural challenges with collegiate engineering talent and corporate CSR funding.
+            Unnati Portal is a platform that connects village-level challenges with engineering student projects, corporate CSR funding, and government monitoring.
           </p>
 
           <p className="font-sans text-charcoal/70 text-sm sm:text-base leading-relaxed">
-            By eliminating intermediaries, village representatives log verified infrastructure needs, engineering teams propose technical solutions as capstone hackathon projects, and CSR grant committees release funds based on verified milestones.
+            It allows citizens and village representatives to report local issues. Student teams can work on these challenges as practical projects.
           </p>
 
-          {/* Highlights */}
-          <div className="grid grid-cols-2 gap-3 pt-2">
-            <div className="p-3 rounded-xl bg-white border border-warm-border">
-              <span className="font-mono text-xs text-doodle-blue block font-semibold">3-TIER SYNC</span>
-              <span className="text-xs text-charcoal/80 font-sans">Panchayat &bull; Student &bull; Corporate</span>
+          {/* Achievement Box */}
+          <div className="p-4 rounded-xl bg-white border border-warm-border flex items-center gap-4">
+            <div className="w-10 h-10 rounded-lg bg-doodle-blue/10 border border-doodle-blue/20 flex items-center justify-center text-doodle-blue font-serif text-lg font-bold">
+              ✦
             </div>
-            <div className="p-3 rounded-xl bg-white border border-warm-border">
-              <span className="font-mono text-xs text-doodle-blue block font-semibold">BACKEND CORE</span>
-              <span className="text-xs text-charcoal/80 font-sans">Spring Boot Microservices</span>
+            <div>
+              <span className="font-medium text-charcoal block text-sm">
+                Smart India Hackathon 2026
+              </span>
+              <span className="text-xs text-charcoal/60 font-sans">
+                Participated in Smart India Hackathon 2026.
+              </span>
             </div>
           </div>
 
@@ -123,7 +126,7 @@ export default function CaseStudyUnnati() {
           {/* Action Button */}
           <div className="pt-2">
             <a
-              href="https://github.com/adityaforgit"
+              href="https://github.com/AlgoAstra-Team/unnati-portal"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-white font-medium text-xs font-mono hover:bg-charcoal/90 transition-all shadow-md"

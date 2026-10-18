@@ -12,30 +12,26 @@ export default function InspirationSection() {
           
           <div className="space-y-2">
             <span className="font-mono text-xs uppercase tracking-widest text-cyan-700 font-semibold">
-              HARDWARE &bull; SENSOR TELEMETRY
+              IOT &bull; SOFTWARE DEVELOPMENT &bull; UI/UX
             </span>
             <h3 className="font-serif text-5xl sm:text-6xl text-charcoal font-normal tracking-tight">
-              Inspiration &amp; Hardware
+              What I’m Exploring
             </h3>
           </div>
 
           <div className="relative inline-flex items-center">
-            <DoodleOval className="w-48 h-10 text-doodle-blue" />
+            <DoodleOval className="w-56 h-10 text-doodle-blue" />
             <span className="absolute inset-0 flex items-center justify-center font-script text-doodle-blue text-base">
-              IoT Edge &amp; Microcontrollers
+              IoT &amp; Software Development
             </span>
           </div>
 
           <p className="font-sans text-charcoal/80 text-base sm:text-lg leading-relaxed">
-            Bridging the physical and digital worlds. As an IoT undergraduate, I explore the synergy between low-level hardware microcontrollers (ESP32, Arduino) and high-concurrency cloud backends via MQTT, WebSockets, and lightweight JSON telemetry.
-          </p>
-
-          <p className="font-sans text-charcoal/70 text-sm sm:text-base leading-relaxed">
-            From smart environmental monitoring to edge automated triggers, hardware informs how I design distributed systems with real-world latency, power constraints, and sensor reliability in mind.
+            As an Internet of Things student, I am interested in how software and hardware can work together to solve everyday problems. I enjoy exploring IoT concepts alongside backend development and web interfaces.
           </p>
 
           <div className="flex flex-wrap gap-2 pt-1 font-mono text-xs">
-            {['ESP32', 'Arduino', 'MQTT Broker', 'WebSockets', 'C++', 'Sensor Networks'].map((t, i) => (
+            {['Internet of Things', 'Software Development', 'UI/UX Design', 'Java', 'Web Technologies', 'Embedded Systems'].map((t, i) => (
               <span key={i} className="px-3 py-1 rounded-full bg-white border border-warm-border text-charcoal/80">
                 {t}
               </span>
@@ -71,7 +67,7 @@ export default function InspirationSection() {
             </div>
 
             <div className="text-[9px] font-mono text-charcoal/40 text-right">
-              latency: 18ms &bull; ok
+              pipeline &bull; active
             </div>
           </div>
 

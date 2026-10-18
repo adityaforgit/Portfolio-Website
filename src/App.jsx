@@ -13,10 +13,21 @@ import CaseStudyMicroservices from './components/CaseStudyMicroservices';
 import InspirationSection from './components/InspirationSection';
 import FunFactsSection from './components/FunFactsSection';
 import FooterSection from './components/FooterSection';
+import LinksHub from './components/LinksHub';
 
 export default function App() {
   const [showIntro, setShowIntro] = useState(true);
   const [introKey, setIntroKey] = useState(0);
+
+  // Check if routed to /links or #links
+  const isLinksRoute = typeof window !== 'undefined' && (
+    window.location.pathname.startsWith('/links') ||
+    window.location.hash === '#links'
+  );
+
+  if (isLinksRoute) {
+    return <LinksHub />;
+  }
 
   const handleReplayIntro = () => {
     setIntroKey(prev => prev + 1);

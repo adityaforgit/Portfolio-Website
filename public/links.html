@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Thakur — Links &amp; Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #F3EFEA;
+      color: #222225;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 1rem;
+    }
+    .container {
+      width: 100%;
+      max-width: 480px;
+      margin: auto;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .top-nav {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+    }
+    .top-nav a {
+      color: #222225;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 0.4rem 0.85rem;
+      border-radius: 9999px;
+      border: 1px solid #E2DCD4;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .top-nav a:hover {
+      background: #FFFFFF;
+      border-color: #3D68FF;
+    }
+    .badge-top {
+      color: rgba(34, 34, 37, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.65rem;
+    }
+    .avatar-wrapper {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 1rem;
+    }
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      border: 2px solid #E2DCD4;
+      background: #FFFFFF;
+      padding: 3px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #222225;
+      margin-bottom: 0.25rem;
+    }
+    .role {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(34, 34, 37, 0.7);
+    }
+    .script-sub {
+      font-family: 'Caveat', cursive;
+      font-size: 1.35rem;
+      color: #3D68FF;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .links-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      width: 100%;
+    }
+    .card-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.15rem;
+      background: #FFFFFF;
+      border: 1px solid #E2DCD4;
+      border-radius: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .card-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      border-color: #3D68FF;
+    }
+    .card-left {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-align: left;
+    }
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+    .icon-resume { background: #D1FAE5; color: #047857; }
+    .icon-linkedin { background: #DBEAFE; color: #1D4ED8; }
+    .icon-github { background: #F3F4F6; color: #1F2937; }
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #222225;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card-link:hover .card-title {
+      color: #3D68FF;
+    }
+    .card-pill {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+    }
+    .pill-green { background: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0; }
+    .pill-blue { background: #EFF6FF; color: #1E40AF; border: 1px solid #BFDBFE; }
+    .pill-dark { background: #F9FAFB; color: #374151; border: 1px solid #E5E7EB; }
+    .card-desc {
+      font-size: 0.75rem;
+      color: rgba(34, 34, 37, 0.65);
+      margin-top: 0.15rem;
+    }
+    .card-arrow {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #F3EFEA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #222225;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+    }
+    .card-link:hover .card-arrow {
+      background: #3D68FF;
+      color: #FFFFFF;
+    }
+    .btn-portfolio {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.85rem;
+      background: #222225;
+      color: #FFFFFF;
+      border-radius: 1rem;
+      text-decoration: none;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      margin-top: 1rem;
+      transition: all 0.2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .btn-portfolio:hover {
+      background: #111113;
+      transform: translateY(-1px);
+    }
+    footer {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.65rem;
+      color: rgba(34, 34, 37, 0.5);
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar Navigation -->
+  <div class="top-nav">
+    <a href="/">← Portfolio Home</a>
+    <span class="badge-top">QR Connect Hub</span>
+  </div>
+
+  <div class="container">
+    
+    <!-- Profile Avatar Frame -->
+    <div class="avatar-wrapper">
+      <img src="/profile.jpg" alt="Aditya Thakur" class="avatar" onerror="this.src='/profile_nobg.png'" />
+    </div>
+
+    <!-- Identity & Role -->
+    <h1>Aditya Thakur</h1>
+    <p class="role">CSE (IoT) &bull; Java &bull; Spring Boot</p>
+    <p class="script-sub">~ select an option below to connect</p>
+
+    <!-- The 3 Core Links Cards -->
+    <div class="links-stack">
+
+      <!-- 1. Resume PDF -->
+      <a href="/Aditya_Thakur_Resume.pdf" target="_blank" rel="noopener noreferrer" class="card-link">
+        <div class="card-left">
+          <div class="card-icon icon-resume">📄</div>
+          <div>
+            <div class="card-title">
+              <span>Resume / CV</span>
+              <span class="card-pill pill-green">PDF Document</span>
+            </div>
+            <div class="card-desc">View or download my updated curriculum vitae</div>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+      </a>
+
+      <!-- 2. LinkedIn -->
+      <a href="https://www.linkedin.com/in/adithakur03" target="_blank" rel="noopener noreferrer" class="card-link">
+        <div class="card-left">
+          <div class="card-icon icon-linkedin">💼</div>
+          <div>
+            <div class="card-title">
+              <span>LinkedIn</span>
+              <span class="card-pill pill-blue">@adithakur03</span>
+            </div>
+            <div class="card-desc">Connect professionally &amp; view updates</div>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+      </a>
+
+      <!-- 3. GitHub -->
+      <a href="https://github.com/adityaforgit" target="_blank" rel="noopener noreferrer" class="card-link">
+        <div class="card-left">
+          <div class="card-icon icon-github">💻</div>
+          <div>
+            <div class="card-title">
+              <span>GitHub</span>
+              <span class="card-pill pill-dark">@adityaforgit</span>
+            </div>
+            <div class="card-desc">Explore projects, hackathons &amp; code</div>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+      </a>
+
+    </div>
+
+    <!-- Return to Full Website -->
+    <a href="/" class="btn-portfolio">
+      <span>🌐 Visit Full Interactive Portfolio</span>
+    </a>
+
+  </div>
+
+  <footer>
+    &copy; 2026 Aditya Thakur &bull; Netaji Subhash Engineering College &bull; Kolkata, India
+  </footer>
+
+</body>
+</html>
+

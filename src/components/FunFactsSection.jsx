@@ -115,7 +115,7 @@ export default function FunFactsSection() {
               Let’s connect.
             </h3>
             <p className="font-sans text-white/70 text-sm sm:text-base leading-relaxed">
-              Have a project idea or just want to say hello? Send me a message.
+              Have a project idea, collaboration, internship opportunity, or just want to say hello? Send me a message.
             </p>
           </div>
 
@@ -125,7 +125,7 @@ export default function FunFactsSection() {
             {/* Your Email Input */}
             <div className="space-y-1.5">
               <label htmlFor="user-email" className="block text-xs font-mono uppercase tracking-wider text-white/70">
-                Your email
+                Your Email
               </label>
               <input
                 id="user-email"

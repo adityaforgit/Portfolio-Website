@@ -48,7 +48,7 @@ export default function FooterSection() {
             onClick={() => scrollTo('contact')}
             className="py-3.5 sm:py-4 px-2 hover:text-charcoal hover:bg-white/60 transition-all cursor-pointer font-medium"
           >
-            Contact &amp; Resume
+            Contact
           </button>
         </div>
       </div>
@@ -66,9 +66,14 @@ export default function FooterSection() {
             <DoodleUnderline className="w-24 h-2.5 text-doodle-blue mt-0.5" />
           </div>
 
-          <p className="font-sans text-charcoal/70 text-sm sm:text-base leading-relaxed">
-            I am always open to exploring software engineering opportunities, backend microservices development, hackathons, and innovative IoT solutions.
-          </p>
+          <div className="space-y-2 font-sans text-charcoal/80 text-sm sm:text-base leading-relaxed">
+            <p className="font-medium text-charcoal">
+              Thank you for visiting my portfolio.
+            </p>
+            <p>
+              I am currently learning, building projects, and exploring opportunities in software development, backend engineering, UI/UX design, and Internet of Things.
+            </p>
+          </div>
 
           {/* Interactive Contact Actions */}
           <div className="space-y-3 pt-2 text-xs font-mono">
@@ -102,7 +107,7 @@ export default function FooterSection() {
             {/* Social Handles */}
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://linkedin.com/in/adithakur03"
+                href="https://www.linkedin.com/in/adithakur03"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-full bg-white border border-warm-border text-charcoal hover:text-doodle-blue hover:border-doodle-blue transition-all shadow-xs"
@@ -134,7 +139,7 @@ export default function FooterSection() {
           </span>
 
           <p className="font-script text-doodle-blue text-xl sm:text-2xl leading-relaxed">
-            "Thank you for stopping by! Whether you have an exciting software engineering role, a challenging hackathon problem statement, or just want to chat about Spring Boot microservices and IoT architecture — my inbox is always open. Let’s build something remarkable together!"
+            "Thank you for visiting my portfolio. I am currently learning, building projects, and exploring opportunities in software development, backend engineering, UI/UX design, and Internet of Things."
           </p>
 
           <div className="pt-2 text-right">

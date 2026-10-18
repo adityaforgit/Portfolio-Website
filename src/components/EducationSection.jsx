@@ -1,5 +1,6 @@
 import React from 'react';
 import { DoodleCurlyArrow, DoodleSparkle, DoodleUnderline } from './Doodles';
+import ResumeQRCode from './ResumeQRCode';
 
 export default function EducationSection() {
   return (
@@ -22,7 +23,7 @@ export default function EducationSection() {
                   Netaji Subhash Engineering College
                 </h3>
                 <span className="text-sm font-sans text-charcoal/70">
-                  Techno India Group &bull; MAKAUT, Kolkata
+                  Kolkata, India
                 </span>
               </div>
               <span className="font-mono text-xs uppercase px-2.5 py-1 rounded bg-white border border-warm-border text-charcoal/80 self-start sm:self-center">
@@ -31,39 +32,43 @@ export default function EducationSection() {
             </div>
 
             <p className="font-sans text-charcoal/80 text-base leading-relaxed pt-1">
-              Pursuing <strong className="text-charcoal font-medium">B.Tech in Computer Science and Engineering (IoT)</strong>. Rigorous coursework spanning foundational algorithms, microservices architecture, and embedded systems engineering.
+              <strong className="text-charcoal font-medium">B.Tech in Computer Science and Engineering (Internet of Things)</strong>
             </p>
           </div>
 
-          {/* Academic Highlights & Key Coursework */}
+          {/* Academic Highlights & Key Focus Areas */}
           <div className="pt-2">
             <span className="font-mono text-xs uppercase tracking-wider text-charcoal/50 block mb-2">
-              Key Focus &amp; Coursework
+              Focus Areas
             </span>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm font-sans text-charcoal/80">
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                Data Structures &amp; Algorithms (Java)
+                Data Structures and Algorithms in Java
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                Spring Boot &amp; Microservices
+                Java and Object-Oriented Programming
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                Database Systems (MySQL &amp; JPA)
+                Spring and Spring Boot
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                Computer Networks &amp; Operating Systems
+                Microservices
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                IoT Architectures (ESP32, MQTT)
+                Web Development
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
-                UI/UX Design &amp; Responsive Web
+                UI/UX Design
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-doodle-blue" />
+                Internet of Things
               </li>
             </ul>
           </div>
@@ -84,49 +89,49 @@ export default function EducationSection() {
 
             {/* QR Card */}
             <div className="bg-white p-5 rounded-2xl border border-warm-border shadow-sm flex flex-col items-center text-center space-y-3">
-              {/* Clean SVG QR Code */}
-              <div className="p-2 bg-warm-sand rounded-xl border border-warm-border/50">
-                <svg viewBox="0 0 120 120" className="w-32 h-32 text-charcoal fill-current">
-                  {/* Top-left position marker */}
-                  <rect x="10" y="10" width="30" height="30" rx="3" fill="none" stroke="currentColor" strokeWidth="5" />
-                  <rect x="20" y="20" width="10" height="10" />
-                  {/* Top-right position marker */}
-                  <rect x="80" y="10" width="30" height="30" rx="3" fill="none" stroke="currentColor" strokeWidth="5" />
-                  <rect x="90" y="20" width="10" height="10" />
-                  {/* Bottom-left position marker */}
-                  <rect x="10" y="80" width="30" height="30" rx="3" fill="none" stroke="currentColor" strokeWidth="5" />
-                  <rect x="20" y="90" width="10" height="10" />
-                  {/* Data patterns */}
-                  <rect x="48" y="12" width="6" height="6" />
-                  <rect x="62" y="12" width="6" height="6" />
-                  <rect x="48" y="26" width="6" height="6" />
-                  <rect x="62" y="32" width="6" height="6" />
-                  <rect x="12" y="48" width="6" height="6" />
-                  <rect x="26" y="54" width="6" height="6" />
-                  <rect x="48" y="48" width="8" height="8" fill="#3D68FF" />
-                  <rect x="62" y="48" width="6" height="6" />
-                  <rect x="76" y="48" width="6" height="6" />
-                  <rect x="90" y="54" width="6" height="6" />
-                  <rect x="104" y="48" width="6" height="6" />
-                  <rect x="48" y="62" width="6" height="6" />
-                  <rect x="62" y="62" width="6" height="6" />
-                  <rect x="76" y="62" width="6" height="6" />
-                  <rect x="48" y="76" width="6" height="6" />
-                  <rect x="62" y="84" width="6" height="6" />
-                  <rect x="80" y="80" width="6" height="6" />
-                  <rect x="94" y="84" width="6" height="6" />
-                  <rect x="84" y="96" width="6" height="6" />
-                  <rect x="100" y="100" width="6" height="6" />
-                </svg>
-              </div>
+              {/* Clickable Real Scannable QR Code */}
+              <a
+                href="/links"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Click to open LinkedIn, GitHub & Resume"
+                className="p-2 bg-warm-sand rounded-xl border border-warm-border/50 block hover:border-doodle-blue transition-all cursor-pointer group-hover:scale-[1.02]"
+              >
+                <ResumeQRCode className="w-32 h-32 text-charcoal" />
+              </a>
 
               <div className="space-y-0.5">
                 <span className="font-mono text-[11px] font-semibold text-charcoal block tracking-wider uppercase">
                   Aditya Thakur &bull; Links
                 </span>
-                <span className="text-[10px] font-sans text-charcoal/60 block">
-                  LinkedIn &bull; GitHub &bull; Resume
-                </span>
+                <div className="text-[10px] font-sans text-charcoal/70 flex items-center justify-center gap-1.5 pt-0.5">
+                  <a
+                    href="https://www.linkedin.com/in/adithakur03"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-doodle-blue hover:underline transition-colors cursor-pointer"
+                  >
+                    LinkedIn
+                  </a>
+                  <span className="text-charcoal/40">&bull;</span>
+                  <a
+                    href="https://github.com/adityaforgit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-doodle-blue hover:underline transition-colors cursor-pointer"
+                  >
+                    GitHub
+                  </a>
+                  <span className="text-charcoal/40">&bull;</span>
+                  <a
+                    href="/Aditya_Thakur_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-doodle-blue hover:underline transition-colors cursor-pointer"
+                  >
+                    Resume
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ export default function CaseStudyNagarSudhar() {
                 SMART INDIA HACKATHON 2025
               </span>
               <span className="text-white/30">&bull;</span>
-              <span className="font-mono text-xs text-white/50">CIVIC GOV</span>
+              <span className="font-mono text-xs text-white/50">TEAM PROJECT</span>
             </div>
             
             <h3 className="font-serif text-5xl sm:text-6xl text-white font-normal tracking-tight">
@@ -25,7 +25,7 @@ export default function CaseStudyNagarSudhar() {
           </div>
 
           <p className="font-sans text-white/80 text-base sm:text-lg leading-relaxed">
-            A centralized civic grievance reporting and municipal resolution platform. Empowers citizens to report local infrastructure defects—such as potholes, waterlogging, or faulty streetlights—with automated GPS geotagging, departmental dispatch, and real-time verification tracking.
+            Nagar Sudhar is a team project created to make civic issue reporting easier. It focuses on giving citizens a simple way to report local problems such as damaged roads, waterlogging, or streetlight issues.
           </p>
 
           {/* Key Metric / Highlight Box */}
@@ -35,10 +35,10 @@ export default function CaseStudyNagarSudhar() {
             </div>
             <div>
               <span className="font-medium text-white block text-sm">
-                4th Rank &bull; Internal Smart India Hackathon
+                Rank 4 &bull; Internal Smart India Hackathon 2025 Selection
               </span>
               <span className="text-xs text-white/60 font-sans">
-                Selected among competitive university engineering teams for civic innovation.
+                Civic issue reporting system developed as a team project for Smart India Hackathon 2025.
               </span>
             </div>
           </div>
@@ -53,21 +53,31 @@ export default function CaseStudyNagarSudhar() {
           </div>
 
           {/* Action Links & Hand-drawn Doodle Note */}
-          <div className="flex items-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center gap-3 pt-2">
             <a
-              href="https://github.com/adityaforgit"
+              href="https://github.com/mayankbuilds/Nagar-Sudhar"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-charcoal font-medium text-xs font-mono hover:bg-white/90 transition-all shadow-md"
             >
               <GithubIcon className="w-4 h-4" />
-              <span>View Source</span>
+              <span>Source Code</span>
+            </a>
+
+            <a
+              href="https://github.com/mayankbuilds/nagar-sudhar-dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 text-white border border-white/20 font-medium text-xs font-mono hover:bg-white/20 transition-all shadow-md"
+            >
+              <GithubIcon className="w-4 h-4" />
+              <span>Dashboard</span>
             </a>
 
             <div className="relative inline-flex items-center">
-              <DoodleOval className="w-40 h-10 text-doodle-blue" />
+              <DoodleOval className="w-36 h-10 text-doodle-blue" />
               <span className="absolute inset-0 flex items-center justify-center font-script text-doodle-blue text-sm">
-                SIH Top Solution
+                SIH Rank 4
               </span>
             </div>
           </div>

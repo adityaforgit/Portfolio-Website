@@ -74,37 +74,37 @@ export default function CaseStudyMicroservices() {
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <span className="font-mono text-xs uppercase tracking-widest text-purple-600 font-semibold">
-                ENTERPRISE SYSTEM DESIGN
+                LEARNING FOCUS
               </span>
               <span className="text-charcoal/30">&bull;</span>
-              <span className="font-mono text-xs text-charcoal/60">JAVA CORE</span>
+              <span className="font-mono text-xs text-charcoal/60">JAVA &bull; SPRING BOOT &bull; MICROSERVICES</span>
             </div>
 
             <h3 className="font-serif text-5xl sm:text-6xl text-charcoal font-normal tracking-tight">
-              Microservices Architecture
+              Learning Focus
             </h3>
             <DoodleUnderline className="w-36 h-3 text-doodle-blue" />
           </div>
 
           <p className="font-sans text-charcoal/80 text-base sm:text-lg leading-relaxed">
-            A resilient, distributed backend architecture engineered with Spring Boot and Spring Cloud. Built with isolated service boundaries to support horizontal scaling, fault tolerance, and independent deployability.
+            I am learning backend development with Java, Spring, Spring Boot, and microservices. I am interested in understanding how scalable applications are designed using REST APIs, service-based architecture, and clean backend practices.
           </p>
 
-          {/* Architectural Pillars */}
+          {/* Focus Pillars */}
           <div className="grid grid-cols-2 gap-3 pt-1">
             <div className="p-3 rounded-xl bg-white border border-warm-border">
-              <span className="font-mono text-xs text-purple-600 block font-semibold">SERVICE DISCOVERY</span>
-              <span className="text-xs text-charcoal/80 font-sans">Netflix Eureka Registry &amp; Client Load Balancing</span>
+              <span className="font-mono text-xs text-purple-600 block font-semibold">REST APIS &amp; SPRING</span>
+              <span className="text-xs text-charcoal/80 font-sans">Service-based architecture &amp; clean backend practices</span>
             </div>
             <div className="p-3 rounded-xl bg-white border border-warm-border">
-              <span className="font-mono text-xs text-purple-600 block font-semibold">CIRCUIT BREAKERS</span>
-              <span className="text-xs text-charcoal/80 font-sans">Resilience4j Automated Fallback &amp; Rate Limiting</span>
+              <span className="font-mono text-xs text-purple-600 block font-semibold">SCALABLE DESIGN</span>
+              <span className="text-xs text-charcoal/80 font-sans">Modular microservices &amp; robust data layers</span>
             </div>
           </div>
 
           {/* Tech Badges */}
           <div className="flex flex-wrap gap-2 pt-1 font-mono text-xs">
-            {['Java', 'Spring Boot', 'Spring Cloud Gateway', 'Eureka', 'Resilience4j', 'JPA / Hibernate', 'Docker'].map((tech, i) => (
+            {['Java', 'Spring', 'Spring Boot', 'Microservices', 'REST APIs', 'Backend Development'].map((tech, i) => (
               <span key={i} className="px-3 py-1 rounded-full bg-white border border-warm-border text-charcoal/80">
                 {tech}
               </span>
@@ -120,7 +120,7 @@ export default function CaseStudyMicroservices() {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-white font-medium text-xs font-mono hover:bg-charcoal/90 transition-all shadow-md"
             >
               <GithubIcon className="w-4 h-4" />
-              <span>Explore Architecture Code</span>
+              <span>Explore GitHub Profile</span>
             </a>
           </div>
 
