@@ -1,27 +1,68 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle2 } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import { DoodleArrow, DoodleSparkle } from './Doodles';
 
 export default function FunFactsSection() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [botcheck, setBotcheck] = useState(false);
+  const [status, setStatus] = useState({
+    submitting: false,
+    success: false,
+    error: false,
+    message: ''
+  });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email || !message) return;
-    
-    // Simulate submission / mailto fallback
-    setSubmitted(true);
-    const subject = encodeURIComponent(`Portfolio Message from ${email}`);
-    const body = encodeURIComponent(message);
-    window.open(`mailto:adityathakur03012006@gmail.com?subject=${subject}&body=${body}`, '_blank');
-    
-    setTimeout(() => {
-      setEmail('');
-      setMessage('');
-      setSubmitted(false);
-    }, 4000);
+    if (!email.trim() || !message.trim()) return;
+
+    setStatus({ submitting: true, success: false, error: false, message: '' });
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: 'f26ef89a-66d2-400b-9f43-71dea092efc2',
+          email: email.trim(),
+          message: message.trim(),
+          subject: 'New portfolio message for Aditya Thakur',
+          from_name: 'Aditya Thakur Portfolio',
+          botcheck: botcheck ? 'spam' : ''
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.status === 200 && result.success) {
+        setStatus({
+          submitting: false,
+          success: true,
+          error: false,
+          message: 'Message sent successfully. I’ll get back to you soon.'
+        });
+        setEmail('');
+        setMessage('');
+      } else {
+        setStatus({
+          submitting: false,
+          success: false,
+          error: true,
+          message: 'Something went wrong. Please try again.'
+        });
+      }
+    } catch (err) {
+      setStatus({
+        submitting: false,
+        success: false,
+        error: true,
+        message: 'Something went wrong. Please try again.'
+      });
+    }
   };
 
   return (
@@ -154,30 +195,59 @@ export default function FunFactsSection() {
               />
             </div>
 
-            {/* Submit Button & Status */}
-            <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-              <button
-                type="submit"
-                disabled={submitted}
-                className="px-7 py-3 rounded-full bg-white text-charcoal font-medium font-mono text-xs uppercase tracking-wider hover:bg-white/90 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
-              >
-                {submitted ? (
-                  <>
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    <span>Message Sent!</span>
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-3.5 h-3.5 text-charcoal" />
-                    <span>Send Message</span>
-                  </>
-                )}
-              </button>
+            {/* Spam-protection hidden field */}
+            <input
+              type="checkbox"
+              name="botcheck"
+              checked={botcheck}
+              onChange={(e) => setBotcheck(e.target.checked)}
+              className="hidden"
+              style={{ display: 'none' }}
+              tabIndex={-1}
+              autoComplete="off"
+            />
 
-              {submitted && (
-                <span className="font-script text-doodle-blue text-lg">
-                  ~ thanks for reaching out!
-                </span>
+            {/* Submit Button & Status */}
+            <div className="pt-2 space-y-3">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <button
+                  type="submit"
+                  disabled={status.submitting}
+                  className="px-7 py-3 rounded-full bg-white text-charcoal font-medium font-mono text-xs uppercase tracking-wider hover:bg-white/90 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {status.submitting ? (
+                    <>
+                      <span className="w-3.5 h-3.5 border-2 border-charcoal/30 border-t-charcoal rounded-full animate-spin" />
+                      <span>Sending…</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-3.5 h-3.5 text-charcoal" />
+                      <span>Send Message</span>
+                    </>
+                  )}
+                </button>
+
+                {status.success && (
+                  <span className="font-script text-doodle-blue text-lg">
+                    ~ thanks for reaching out!
+                  </span>
+                )}
+              </div>
+
+              {/* Status Message below button */}
+              {status.success && (
+                <div className="flex items-center gap-2 p-3 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-sans">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <span>Message sent successfully. I’ll get back to you soon.</span>
+                </div>
+              )}
+
+              {status.error && (
+                <div className="flex items-center gap-2 p-3 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-300 text-xs sm:text-sm font-sans">
+                  <AlertCircle className="w-4 h-4 text-rose-400 flex-shrink-0" />
+                  <span>Something went wrong. Please try again.</span>
+                </div>
               )}
             </div>
 
