@@ -1,6 +1,7 @@
 import React from 'react';
-import { ExternalLink, CheckCircle2, AlertCircle, MapPin, ShieldCheck } from 'lucide-react';
-import { DoodleSparkle, DoodleMusicNotes, DoodleArrow, DoodleOval, GithubIcon } from './Doodles';
+import { DoodleSparkle, DoodleMusicNotes, DoodleOval, GithubIcon } from './Doodles';
+import nagarSudharMobile from '../assets/ui/nagar_sudhar_mobile.png';
+import nagarSudharDesktop from '../assets/ui/nagar_sudhar_desktop.png';
 
 export default function CaseStudyNagarSudhar() {
   return (
@@ -45,7 +46,7 @@ export default function CaseStudyNagarSudhar() {
 
           {/* Tech Stack Badges */}
           <div className="flex flex-wrap gap-2 pt-1 font-mono text-xs">
-            {['Java', 'Spring Boot', 'REST APIs', 'React', 'Tailwind CSS', 'Leaflet Maps', 'MySQL'].map((tech, i) => (
+            {['Flutter', 'Dart', 'React', 'JavaScript', 'Tailwind CSS', 'Leaflet Maps', 'REST APIs'].map((tech, i) => (
               <span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70">
                 {tech}
               </span>
@@ -92,55 +93,49 @@ export default function CaseStudyNagarSudhar() {
           <DoodleSparkle className="absolute bottom-4 left-6 w-6 h-6 text-doodle-blue" delay={0.4} />
 
           {/* Primary Mobile Mockup (Tilted Left) */}
-          <div className="relative w-64 sm:w-72 aspect-[9/18] rounded-[2.5rem] bg-charcoal-dark border-4 border-charcoal-border shadow-2xl overflow-hidden p-3 transform -rotate-3 hover:rotate-0 transition-transform duration-500 z-10">
+          <div className="relative w-64 sm:w-72 aspect-[9/18] rounded-[2.5rem] bg-charcoal-dark border-4 border-charcoal-border shadow-2xl overflow-hidden p-2.5 transform -rotate-3 hover:rotate-0 transition-transform duration-500 z-10 group">
             {/* Phone Speaker Notch */}
-            <div className="w-20 h-3 bg-white/20 rounded-full mx-auto mb-3" />
-            
-            {/* Screen Content: Nagar Sudhar Citizen App */}
-            <div className="h-full space-y-3 font-sans text-xs">
-              <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                <span className="font-serif font-semibold text-amber-400 text-sm">Nagar Sudhar</span>
-                <span className="font-mono text-[9px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Live GPS</span>
-              </div>
-
-              {/* Feed Card 1 */}
-              <div className="p-3 rounded-xl bg-charcoal-card border border-white/5 space-y-1.5">
-                <div className="flex items-center justify-between text-[10px]">
-                  <span className="font-medium text-white flex items-center gap-1">
-                    <MapPin className="w-3 h-3 text-red-400" /> Sector V, Salt Lake
-                  </span>
-                  <span className="px-1.5 py-0.5 rounded bg-amber-400/20 text-amber-300 font-mono text-[8px]">In Review</span>
-                </div>
-                <div className="text-[11px] text-white/70">Main Road Pothole &bull; Depth 14cm</div>
-                <div className="text-[9px] text-white/40 font-mono">Assigned to: Ward 28 Roads Dept</div>
-              </div>
-
-              {/* Feed Card 2 */}
-              <div className="p-3 rounded-xl bg-charcoal-card border border-white/5 space-y-1.5">
-                <div className="flex items-center justify-between text-[10px]">
-                  <span className="font-medium text-white flex items-center gap-1">
-                    <MapPin className="w-3 h-3 text-emerald-400" /> Gariahat Junction
-                  </span>
-                  <span className="px-1.5 py-0.5 rounded bg-emerald-400/20 text-emerald-300 font-mono text-[8px]">Resolved</span>
-                </div>
-                <div className="text-[11px] text-white/70">Streetlight Failure #8812</div>
-                <div className="text-[9px] text-white/40 font-mono">Verified by Municipal Officer</div>
-              </div>
-
-              {/* Action Button on phone screen */}
-              <div className="mt-4 p-2.5 rounded-xl bg-amber-500/20 border border-amber-400/40 text-center font-mono text-[10px] text-amber-300 font-semibold">
-                + Report New Municipal Incident
-              </div>
+            <div className="absolute top-3 left-1/2 -translate-x-1/2 w-20 h-3 bg-black/80 rounded-full z-20 flex items-center justify-center pointer-events-none">
+              <div className="w-2 h-2 rounded-full bg-white/20" />
             </div>
+            
+            {/* Real App Screenshot */}
+            <a
+              href="https://nagar-sudhar.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full rounded-[2rem] overflow-hidden bg-neutral-900 border border-white/10 relative"
+              title="Click to visit live Nagar Sudhar web app"
+            >
+              <img
+                src={nagarSudharMobile}
+                alt="Nagar Sudhar Civic App UI"
+                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-3 inset-x-3 flex items-center justify-between text-white/90 text-[10px] font-mono px-2 py-1 rounded-lg bg-black/70 backdrop-blur-sm border border-white/15">
+                <span className="flex items-center gap-1.5 text-amber-400 font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  Live App
+                </span>
+                <span className="text-white/60">nagar-sudhar.vercel.app &rarr;</span>
+              </div>
+            </a>
           </div>
 
           {/* Secondary Mobile Mockup (Behind Tilted Right) */}
-          <div className="hidden sm:block absolute right-2 w-56 aspect-[9/18] rounded-[2rem] bg-charcoal-card/90 border-2 border-white/10 shadow-xl overflow-hidden p-3 transform rotate-6 opacity-60 z-0 scale-90">
-            <div className="w-16 h-2.5 bg-white/20 rounded-full mx-auto mb-3" />
-            <div className="p-2 space-y-2 text-[10px] font-mono text-white/70">
-              <span className="text-doodle-blue font-semibold block">ADMIN OVERSIGHT</span>
-              <div className="h-20 rounded bg-white/5 p-2 text-[9px] flex items-center justify-center text-white/40">
-                Heatmap Analytics &bull; 87% Cleared
+          <div className="hidden sm:block absolute right-2 w-56 aspect-[9/18] rounded-[2rem] bg-charcoal-card/90 border-2 border-white/10 shadow-xl overflow-hidden p-2 transform rotate-6 opacity-70 hover:opacity-90 transition-opacity z-0 scale-90">
+            <div className="w-16 h-2 bg-white/20 rounded-full mx-auto mb-2" />
+            <div className="w-full h-full rounded-[1.5rem] overflow-hidden bg-neutral-900 border border-white/10 relative">
+              <img
+                src={nagarSudharDesktop}
+                alt="Nagar Sudhar Admin Oversight"
+                className="w-full h-full object-cover object-left-top"
+                loading="lazy"
+              />
+              <div className="absolute bottom-2 inset-x-2 text-center text-[9px] font-mono text-white/70 bg-black/70 backdrop-blur-sm py-0.5 rounded border border-white/10">
+                Live Web View
               </div>
             </div>
           </div>

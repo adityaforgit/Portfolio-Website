@@ -147,7 +147,7 @@ export default function HelloSection() {
           <div className="pt-2 flex items-center gap-3">
             <span className="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
             <span className="font-mono text-xs uppercase tracking-wider text-charcoal/70">
-              Open to Software Internships &bull; 2025-2026
+              Open to Software Internships
             </span>
           </div>
 

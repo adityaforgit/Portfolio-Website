@@ -1,5 +1,5 @@
 import React from 'react';
-import { RetroWorkstation, DoodleArrow, DoodleSparkle, DoodleUnderline } from './Doodles';
+import { RetroWorkstation, DoodleArrow, DoodleUnderline } from './Doodles';
 
 const toolIcons = [
   { name: 'Java', symbol: '☕' },

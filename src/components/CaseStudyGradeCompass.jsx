@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
-import { Calculator, Target, Sparkles, Check } from 'lucide-react';
-import { DoodleOval, DoodleSparkle, DoodleArrow, GithubIcon } from './Doodles';
+import React from 'react';
+import { DoodleOval, DoodleSparkle, GithubIcon } from './Doodles';
+import gradeCompassMobile from '../assets/ui/grade_compass_mobile.png';
+import gradeCompassDesktop from '../assets/ui/grade_compass_desktop.png';
 
 export default function CaseStudyGradeCompass() {
-  const [targetSgpa, setTargetSgpa] = useState(8.5);
-  const internalScore = 24 + 38; // CA + PCA = 62 / 65
-
-  // Calculate needed ESE score
-  const neededEse = Math.min(70, Math.max(28, Math.round((targetSgpa * 10 - internalScore * 0.4) * 1.15)));
 
   return (
     <section id="grade-compass" className="relative w-full bg-charcoal text-white py-20 sm:py-28 px-6 sm:px-12 border-b border-white/10 overflow-hidden">
@@ -87,72 +83,50 @@ export default function CaseStudyGradeCompass() {
         <div className="md:col-span-6 relative flex justify-center items-center py-6">
           <DoodleSparkle className="absolute -top-2 left-6 w-6 h-6 text-doodle-blue" delay={0.2} />
           
-          {/* Main Interactive Phone Frame */}
-          <div className="relative w-64 sm:w-72 aspect-[9/18] rounded-[2.5rem] bg-charcoal-dark border-4 border-charcoal-border shadow-2xl overflow-hidden p-3.5 z-10">
-            <div className="w-20 h-3 bg-white/20 rounded-full mx-auto mb-3" />
-
-            <div className="h-full space-y-3 font-sans text-xs">
-              <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                <span className="font-serif font-bold text-emerald-400 text-sm flex items-center gap-1.5">
-                  <Calculator className="w-4 h-4" /> Grade Compass
-                </span>
-                <span className="font-mono text-[9px] text-white/50">MAKAUT Calc</span>
-              </div>
-
-              {/* Internal Marks Card */}
-              <div className="p-3 rounded-xl bg-charcoal-card border border-white/10 space-y-2">
-                <span className="font-mono text-[9px] text-white/50 uppercase block">Continuous Evaluation</span>
-                <div className="grid grid-cols-2 gap-2 text-[10px]">
-                  <div className="p-1.5 rounded bg-white/5">
-                    <span className="text-white/50 block text-[8px]">CA 1-4 AVG</span>
-                    <span className="text-white font-bold">24 / 25</span>
-                  </div>
-                  <div className="p-1.5 rounded bg-white/5">
-                    <span className="text-white/50 block text-[8px]">PCA PRACTICAL</span>
-                    <span className="text-white font-bold">38 / 40</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Interactive Target Slider Simulation */}
-              <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-400/30 space-y-2">
-                <div className="flex items-center justify-between text-[11px]">
-                  <span className="text-emerald-400 font-semibold flex items-center gap-1">
-                    <Target className="w-3.5 h-3.5" /> Target SGPA
-                  </span>
-                  <span className="font-mono text-emerald-300 font-bold">{targetSgpa.toFixed(1)}</span>
-                </div>
-                
-                <input
-                  type="range"
-                  min="7.0"
-                  max="9.8"
-                  step="0.1"
-                  value={targetSgpa}
-                  onChange={(e) => setTargetSgpa(parseFloat(e.target.value))}
-                  className="w-full accent-emerald-400 cursor-pointer h-1 bg-white/20 rounded"
-                />
-
-                <div className="p-2 rounded bg-charcoal-dark border border-emerald-400/20 text-center">
-                  <span className="text-[9px] text-white/60 block">REQUIRED IN 70-MARK ESE</span>
-                  <span className="text-emerald-300 font-bold font-mono text-sm">{neededEse} / 70</span>
-                </div>
-              </div>
-
-              {/* Quick Status */}
-              <div className="p-2 rounded-lg bg-white/5 text-center text-[10px] text-white/60">
-                Grade: <strong className="text-white">O (Outstanding) Eligible</strong>
-              </div>
+          {/* Main Mobile Screen Mockup */}
+          <div className="relative w-64 sm:w-72 aspect-[9/18] rounded-[2.5rem] bg-charcoal-dark border-4 border-charcoal-border shadow-2xl overflow-hidden p-2.5 z-10 group transform hover:scale-[1.02] transition-transform duration-500">
+            {/* Phone Speaker Notch */}
+            <div className="absolute top-3 left-1/2 -translate-x-1/2 w-20 h-3 bg-black/80 rounded-full z-20 flex items-center justify-center pointer-events-none">
+              <div className="w-2 h-2 rounded-full bg-white/20" />
             </div>
+
+            {/* Real App Screenshot */}
+            <a
+              href="https://makautgradecompass.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full rounded-[2rem] overflow-hidden bg-neutral-900 border border-white/10 relative"
+              title="Click to visit live Grade Compass web app"
+            >
+              <img
+                src={gradeCompassMobile}
+                alt="Grade Compass Live Calculator UI"
+                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-3 inset-x-3 flex items-center justify-between text-white/90 text-[10px] font-mono px-2 py-1 rounded-lg bg-black/70 backdrop-blur-sm border border-white/15">
+                <span className="flex items-center gap-1.5 text-emerald-400 font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  Live App
+                </span>
+                <span className="text-white/60">gradecompass.vercel.app &rarr;</span>
+              </div>
+            </a>
           </div>
 
           {/* Secondary Mockup Screen (Behind) */}
-          <div className="hidden sm:block absolute right-0 w-56 aspect-[9/18] rounded-[2rem] bg-charcoal-card/80 border border-white/10 shadow-lg overflow-hidden p-3 transform rotate-6 scale-90 opacity-50 z-0">
-            <div className="w-16 h-2.5 bg-white/20 rounded-full mx-auto mb-3" />
-            <div className="space-y-2 text-[9px] font-mono text-white/60">
-              <span className="text-emerald-400 font-semibold block">ALL 6 SEMESTERS</span>
-              <div className="h-28 rounded bg-white/5 p-2 flex items-center justify-center text-center">
-                CGPA Cumulative Curve &bull; 8.84 Expected
+          <div className="hidden sm:block absolute right-0 w-56 aspect-[9/18] rounded-[2rem] bg-charcoal-card/80 border border-white/10 shadow-lg overflow-hidden p-2 transform rotate-6 scale-90 opacity-70 hover:opacity-90 transition-opacity z-0">
+            <div className="w-16 h-2 bg-white/20 rounded-full mx-auto mb-2" />
+            <div className="w-full h-full rounded-[1.5rem] overflow-hidden bg-neutral-900 border border-white/10 relative">
+              <img
+                src={gradeCompassDesktop}
+                alt="Grade Compass Desktop Calculator"
+                className="w-full h-full object-cover object-left-top"
+                loading="lazy"
+              />
+              <div className="absolute bottom-2 inset-x-2 text-center text-[9px] font-mono text-white/70 bg-black/70 backdrop-blur-sm py-0.5 rounded border border-white/10">
+                Desktop View
               </div>
             </div>
           </div>

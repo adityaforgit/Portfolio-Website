@@ -1,6 +1,6 @@
 import React from 'react';
 import { FileText, Globe, ArrowUpRight, ArrowLeft } from 'lucide-react';
-import { DoodleSparkle, DoodleUnderline, DoodleArrow, GithubIcon, LinkedinIcon } from './Doodles';
+import { DoodleSparkle, DoodleUnderline, GithubIcon, LinkedinIcon } from './Doodles';
 import profileImg from '../assets/profile.jpg';
 
 export default function LinksHub() {
@@ -150,7 +150,7 @@ export default function LinksHub() {
 
       {/* Footer Strip */}
       <div className="w-full max-w-lg py-3 border-t border-warm-border/70 text-center text-[10px] font-mono text-charcoal/50">
-        &copy; {new Date().getFullYear()} Aditya Thakur &bull; Netaji Subhash Engineering College &bull; Kolkata, India
+        &copy; {new Date().getFullYear()} Aditya Thakur &bull; Kolkata, India
       </div>
 
     </div>

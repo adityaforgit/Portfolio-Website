@@ -1,5 +1,5 @@
 import React from 'react';
-import { DoodleCurlyArrow, DoodleSparkle, DoodleUnderline } from './Doodles';
+import { DoodleCurlyArrow, DoodleUnderline } from './Doodles';
 import ResumeQRCode from './ResumeQRCode';
 
 export default function EducationSection() {

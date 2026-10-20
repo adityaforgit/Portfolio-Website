@@ -1,5 +1,4 @@
 import React from 'react';
-import { Cpu, Layers, Server, ShieldCheck, Database } from 'lucide-react';
 import { DoodleSparkle, DoodleUnderline, GithubIcon } from './Doodles';
 
 export default function CaseStudyMicroservices() {

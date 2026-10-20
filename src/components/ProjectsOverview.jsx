@@ -1,5 +1,8 @@
 import React from 'react';
 import { DoodleSpiral, DoodleArrow } from './Doodles';
+import gradeCompassImg from '../assets/ui/grade_compass_mobile.png';
+import nagarSudharImg from '../assets/ui/nagar_sudhar_mobile.png';
+import unnatiImg from '../assets/ui/unnati_portal_1.png';
 
 const previewItems = [
   {
@@ -10,19 +13,8 @@ const previewItems = [
     description: 'A MAKAUT-focused academic calculator that helps students track internal marks and estimate the End-Semester Examination score needed for target grades.',
     color: 'from-emerald-500/20 to-teal-500/10',
     accent: '#10B981',
-    preview: (
-      <div className="w-full h-full p-2.5 flex flex-col justify-between text-[8px] font-mono">
-        <div className="flex justify-between items-center text-emerald-400">
-          <span>GRADE COMPASS</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-        </div>
-        <div className="bg-emerald-500/20 border border-emerald-400/30 p-1.5 rounded">
-          <div className="text-emerald-300">Target SGPA: 8.50</div>
-          <div className="text-white font-bold">Need 52/70 in ESE</div>
-        </div>
-        <div className="text-white/40 text-[7px]">Built from scratch for MAKAUT</div>
-      </div>
-    )
+    badge: 'MAKAUT Calc',
+    image: gradeCompassImg,
   },
   {
     id: 'nagar-sudhar',
@@ -32,19 +24,8 @@ const previewItems = [
     description: 'Civic issue reporting system developed as a team project for Smart India Hackathon 2025.',
     color: 'from-amber-500/20 to-orange-500/10',
     accent: '#F59E0B',
-    preview: (
-      <div className="w-full h-full p-2.5 flex flex-col justify-between text-[8px] font-mono">
-        <div className="flex justify-between items-center text-amber-400">
-          <span>CIVIC DISPATCH</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-        </div>
-        <div className="bg-white/10 p-1.5 rounded">
-          <div className="text-white/60">Pothole Reported</div>
-          <div className="text-emerald-400 font-bold">Auto-Routed #402</div>
-        </div>
-        <div className="text-white/40 text-[7px]">Geo: 22.5726° N, 88.3639° E</div>
-      </div>
-    )
+    badge: 'SIH Rank 4',
+    image: nagarSudharImg,
   },
   {
     id: 'unnati',
@@ -54,19 +35,8 @@ const previewItems = [
     description: 'A platform connecting village-level challenges with student projects, CSR funding, and government monitoring.',
     color: 'from-blue-500/20 to-indigo-500/10',
     accent: '#3D68FF',
-    preview: (
-      <div className="w-full h-full p-2.5 flex flex-col justify-between text-[8px] font-mono">
-        <div className="flex justify-between items-center text-blue-400">
-          <span>UNNATI GOV</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-        </div>
-        <div className="bg-white/10 p-1.5 rounded">
-          <div className="text-white/60">Village Problem #18</div>
-          <div className="text-blue-300 font-bold">CSR Funding Linked</div>
-        </div>
-        <div className="text-white/40 text-[7px]">Status: Active Sprint</div>
-      </div>
-    )
+    badge: 'SIH 2026',
+    image: unnatiImg,
   }
 ];
 
@@ -129,11 +99,23 @@ export default function ProjectsOverview() {
                 {/* Mini Smartphone Mockup Frame */}
                 <div className="relative w-full aspect-[9/15] rounded-xl bg-charcoal-dark border-2 border-white/15 overflow-hidden shadow-md group-hover:border-doodle-blue transition-colors">
                   {/* Speaker Notch */}
-                  <div className="absolute top-1 left-1/2 -translate-x-1/2 w-8 h-1 rounded-full bg-white/20 z-10" />
+                  <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-8 h-1 rounded-full bg-white/40 z-20" />
                   
-                  {/* Screen Content */}
-                  <div className={`w-full h-full bg-gradient-to-b ${item.color} pt-3`}>
-                    {item.preview}
+                  {/* Real UI Screen Content */}
+                  <div className="relative w-full h-full overflow-hidden bg-neutral-900">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between pointer-events-none">
+                      <span className="font-mono text-[8px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-white/90 border border-white/10">
+                        {item.badge}
+                      </span>
+                      <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: item.accent }} />
+                    </div>
                   </div>
                 </div>
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Cpu, Wifi, Activity, Sparkles } from 'lucide-react';
-import { DoodleOval, DoodleSparkle, DoodleArrow } from './Doodles';
+import { DoodleOval, DoodleSparkle } from './Doodles';
 
 export default function InspirationSection() {
   return (

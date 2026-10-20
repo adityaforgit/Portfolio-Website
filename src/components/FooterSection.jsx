@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Copy, Check, ArrowUpRight } from 'lucide-react';
+import { Phone, MapPin, Copy, Check } from 'lucide-react';
 import { DoodleSparkle, DoodleUnderline, GithubIcon, LinkedinIcon } from './Doodles';
 
 export default function FooterSection() {
@@ -153,7 +153,7 @@ export default function FooterSection() {
 
       {/* Copyright Strip */}
       <div className="border-t border-warm-border/70 py-6 text-center text-xs font-mono text-charcoal/50">
-        &copy; {new Date().getFullYear()} Aditya Thakur &bull; Netaji Subhash Engineering College &bull; Kolkata, India
+        &copy; {new Date().getFullYear()} Aditya Thakur &bull; Kolkata, India
       </div>
 
     </footer>
